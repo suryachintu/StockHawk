@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="divider_margin">2dp</dimen>
+    <dimen name="price_textview_margin">8dp</dimen>
+    <dimen name="change_textview_width">90dp</dimen>
+    <dimen name="change_margin">4dp</dimen>
+</resources>
