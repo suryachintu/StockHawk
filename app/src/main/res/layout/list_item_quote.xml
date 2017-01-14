@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:background="@android:color/white"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin">
 
     <View
         android:id="@+id/divider"
@@ -40,7 +40,6 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/price_textview_margin"
         android:layout_marginEnd="@dimen/price_textview_margin"
         android:textColor="@android:color/black"
         tools:text="1000.00" />
@@ -53,7 +52,6 @@
         android:gravity="center_horizontal"
         android:textAppearance="?android:textAppearanceMedium"
         android:background="@drawable/percent_change_pill_green"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/divider"
         android:textColor="@android:color/white"

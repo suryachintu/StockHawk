@@ -5,4 +5,6 @@
     <dimen name="price_textview_margin">8dp</dimen>
     <dimen name="change_textview_width">90dp</dimen>
     <dimen name="change_margin">4dp</dimen>
+    <dimen name="fab_preesed_state">12dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
 </resources>
