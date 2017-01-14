@@ -36,5 +36,9 @@
     <!-- A11y -->
     <string name="price">Price: <xliff:g id="price_format">%1$s</xliff:g></string>
     <string name="change">Change: <xliff:g id="change_format">%1$s</xliff:g></string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="price_text">Price</string>
 
 </resources>

@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -16,9 +16,23 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="DetailTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <!--<style name="StockSymbolTextStyle">-->
-        <!--<item name="android:textSize">?android:textAppearanceMedium</item>-->
-        <!--<item name="android:textAllCaps">true</item>-->
-        <!--<item name="android:textColor">#FFFFFF</item>-->
+    <!--<item name="android:textSize">?android:textAppearanceMedium</item>-->
+    <!--<item name="android:textAllCaps">true</item>-->
+    <!--<item name="android:textColor">#FFFFFF</item>-->
     <!--</style>-->
 </resources>

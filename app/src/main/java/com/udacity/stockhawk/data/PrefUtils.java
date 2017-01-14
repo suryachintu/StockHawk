@@ -15,6 +15,8 @@ public final class PrefUtils {
     private PrefUtils() {
     }
 
+    public static final String ARG_SECTION_NUMBER = "section_number";
+
     public static Set<String> getStocks(Context context) {
         String stocksKey = context.getString(R.string.pref_stocks_key);
         String initializedKey = context.getString(R.string.pref_stocks_initialized_key);
