@@ -130,7 +130,7 @@ public class DetailActivity extends AppCompatActivity {
 
                 quarters.add(dateString);
 
-                Log.e("history",dateString + "vvv");
+//                Log.e("history",dateString + "vvv");
 
             }
 
