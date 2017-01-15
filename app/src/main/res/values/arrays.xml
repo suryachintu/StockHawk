@@ -6,4 +6,13 @@
         <item>@string/default_stocks_microsoft</item>
         <item>@string/default_stocks_facebook</item>
     </string-array>
+
+    <string-array name="sort_type">
+        <item>@string/one_week_symbol</item>
+        <item>@string/one_month_symbol</item>
+        <item>@string/three_month_symbol</item>
+        <item>@string/six_month_symbol</item>
+        <item>@string/one_year_symbol</item>
+    </string-array>
+
 </resources>
