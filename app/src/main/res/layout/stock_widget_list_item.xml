@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/widget_list_item"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_margin="@dimen/divider_margin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:background="@color/divider_color"/>
+
+    <TextView
+        android:layout_below="@+id/divider"
+        android:id="@+id/symbol"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        tools:text="GOOG" />
+
+    <TextView
+        android:layout_below="@+id/symbol"
+        android:id="@+id/company_name"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="GOOG" />
+
+    <TextView
+        android:layout_below="@+id/divider"
+        android:id="@+id/price"
+        android:layout_toStartOf="@+id/change"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/price_textview_margin"
+        android:textColor="@android:color/black"
+        tools:text="1000.00" />
+
+    <TextView
+        android:layout_below="@+id/divider"
+        android:id="@+id/change"
+        android:layout_width="@dimen/change_textview_width"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:background="@drawable/percent_change_pill_green"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/divider"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/change_margin"
+        tools:text="100%" />
+
+</RelativeLayout>

@@ -14,4 +14,9 @@
     <dimen name="price_textSize">34sp</dimen>
     <dimen name="card_margin">-24dp</dimen>
     <dimen name="graph_marginTop">36dp</dimen>
+    <dimen name="widget_margin">0dp</dimen>
+    <dimen name="widge_default_height">180dp</dimen>
+    <dimen name="widget_detail_min_resize_height">180dp</dimen>
+    <dimen name="widget_detail_min_resize_width">220dp</dimen>
+    <dimen name="widget_detail_default_width">250dp</dimen>
 </resources>
