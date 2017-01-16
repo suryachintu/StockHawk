@@ -39,6 +39,7 @@
     <string name="price">Price: <xliff:g id="price_format">%1$s</xliff:g></string>
     <string name="change">Change: <xliff:g id="change_format">%1$s</xliff:g></string>
     <string name="symbol_format">Company Symbol: <xliff:g id="symbol_format">%1$s</xliff:g></string>
+    <string name="fab">Floating Action Button</string>
 
     <!--Detail Activity string-->
     <string name="title_activity_detail">DetailActivity</string>
@@ -69,6 +70,7 @@
 
     <!--format price for content description-->
     <string name="format_price">$ <xliff:g id="price_format">%1$s</xliff:g></string>
+
 
 
 </resources>

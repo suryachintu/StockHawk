@@ -31,6 +31,7 @@
         app:backgroundTint="@color/material_blue_500"
         app:elevation="@dimen/fab_elevation"
         app:fabSize="normal"
+        android:contentDescription="@string/fab"
         app:pressedTranslationZ="@dimen/fab_preesed_state" />
 
     <TextView
