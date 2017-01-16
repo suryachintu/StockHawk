@@ -7,6 +7,7 @@
         <item>@string/default_stocks_facebook</item>
     </string-array>
 
+    <!--Used to plot based on 1W,1M,3M,6M,1Y-->
     <string-array name="sort_type">
         <item>@string/one_week_symbol</item>
         <item>@string/one_month_symbol</item>

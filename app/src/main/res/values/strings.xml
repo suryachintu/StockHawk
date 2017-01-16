@@ -9,43 +9,55 @@
     <string name="pref_display_mode_key">displayMode</string>
     <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
 
+    <!--Used to show change in $ or %-->
     <string name="pref_display_mode_absolute_key">absolute</string>
     <string name="pref_display_mode_percentage_key">percentage</string>
 
+    <!--Strings for default stocks-->
     <string name="default_stocks_yahoo">YHOO</string>
     <string name="default_stocks_apple">AAPL</string>
     <string name="default_stocks_microsoft">MSFT</string>
     <string name="default_stocks_facebook">FB</string>
 
-
     <string name="action_change_units">@string/pref_display_mode_key</string>
 
-
+    <!--Strings related to dialog title-->
     <string name="dialog_title">Add Stock</string>
     <string name="dialog_hint">Symbol (e.g. GOOG)</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_add">Add</string>
 
+    <!--Strings related to errors messages-->
     <string name="error_no_network">No network connectivity! Will load stock cursor when the network is available.</string>
     <string name="error_no_stocks">No stocks added! Hit the floating action button to add one.</string>
 
+    <!--Toasts-->
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
-
 
     <!-- A11y -->
     <string name="price">Price: <xliff:g id="price_format">%1$s</xliff:g></string>
     <string name="change">Change: <xliff:g id="change_format">%1$s</xliff:g></string>
     <string name="symbol_format">Company Symbol: <xliff:g id="symbol_format">%1$s</xliff:g></string>
 
+    <!--Detail Activity string-->
     <string name="title_activity_detail">DetailActivity</string>
+
+    <!--setting string-->
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!--Price String-->
     <string name="price_text">Price</string>
+
+    <!--One week label-->
     <string name="one_week_symbol">1W</string>
+    <!--One month label-->
     <string name="one_month_symbol">1M</string>
+    <!--One three month label-->
     <string name="three_month_symbol">3M</string>
+    <!--One six month label-->
     <string name="six_month_symbol">6M</string>
+    <!--One year label-->
     <string name="one_year_symbol">1Y</string>
     <string name="one_month_label">One Month</string>
     <string name="one_week_label">One Week</string>
@@ -54,6 +66,8 @@
     <string name="one_year_label">One Year</string>
     <string name="description_label">Stock Chart</string>
     <string name="chart_description">Stock Chart</string>
+
+    <!--format price for content description-->
     <string name="format_price">$ <xliff:g id="price_format">%1$s</xliff:g></string>
 
 

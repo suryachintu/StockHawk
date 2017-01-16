@@ -13,6 +13,7 @@ import android.widget.RemoteViewsService;
 import com.udacity.stockhawk.R;
 import com.udacity.stockhawk.data.Contract;
 import com.udacity.stockhawk.data.PrefUtils;
+import com.udacity.stockhawk.ui.MainActivity;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -52,8 +53,6 @@ public class StockWidgetRemoteViewService extends RemoteViewsService {
                         null,
                         null,
                         Contract.Quote.COLUMN_SYMBOL);
-                data.moveToFirst();
-                Log.e("xxx",data.getString(Contract.Quote.POSITION_COMPANY_NAME));
                 Binder.restoreCallingIdentity(identityToken);
             }
 
@@ -73,13 +72,11 @@ public class StockWidgetRemoteViewService extends RemoteViewsService {
             @Override
             public RemoteViews getViewAt(int position) {
 
-                Log.e("xxx",position+"");
-
                 if (position == AdapterView.INVALID_POSITION
-                        ||data==null||!data.moveToPosition(position)){
+                        || data == null || !data.moveToPosition(position)){
                     return null;
                 }
-                RemoteViews views = new RemoteViews(getPackageName(), R.layout.stock_widget_layout);
+                RemoteViews views = new RemoteViews(getPackageName(), R.layout.widget_list_item);
 
                 final DecimalFormat dollarFormat = (DecimalFormat) NumberFormat.getCurrencyInstance(Locale.US);
                 final DecimalFormat dollarFormatWithPlus = (DecimalFormat) NumberFormat.getCurrencyInstance(Locale.US);
@@ -95,7 +92,7 @@ public class StockWidgetRemoteViewService extends RemoteViewsService {
                 float rawAbsoluteChange = data.getFloat(Contract.Quote.POSITION_ABSOLUTE_CHANGE);
                 float percentageChange = data.getFloat(Contract.Quote.POSITION_PERCENTAGE_CHANGE);
 
-                int background;
+                int background = R.drawable.percent_change_pill_red;;
                 if (rawAbsoluteChange > 0) {
                     background = R.drawable.percent_change_pill_green;
                 } else {
@@ -111,23 +108,20 @@ public class StockWidgetRemoteViewService extends RemoteViewsService {
                 } else {
                     changeValue = percentage;
                 }
-                views.setTextViewText(R.id.company_name, company_name);
-                views.setTextViewText(R.id.symbol, symbol);
-                views.setTextViewText(R.id.price, price);
-                views.setTextViewText(R.id.change, changeValue);
-
+                views.setTextViewText(R.id.widget_symbol, symbol);
+                views.setTextViewText(R.id.widget_price, price);
+                views.setTextViewText(R.id.widget_change, changeValue);
                 final Intent fillInIntent = new Intent();
                 Uri stockUri = Contract.Quote.makeUriForStock(symbol);
                 fillInIntent.setData(stockUri);
                 views.setOnClickFillInIntent(R.id.widget_list_item, fillInIntent);
 
-                Log.e("xx",changeValue);
                 return views;
             }
 
             @Override
             public RemoteViews getLoadingView() {
-                return new RemoteViews(getPackageName(),R.layout.stock_widget_list_item);
+                return new RemoteViews(getPackageName(),R.layout.widget_list_item);
             }
 
             @Override
@@ -144,7 +138,7 @@ public class StockWidgetRemoteViewService extends RemoteViewsService {
 
             @Override
             public boolean hasStableIds() {
-                return false;
+                return true;
             }
         };
     }

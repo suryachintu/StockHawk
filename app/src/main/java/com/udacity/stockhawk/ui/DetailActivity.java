@@ -69,10 +69,8 @@ public class DetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ButterKnife.bind(this);
-        symbol.setText(getIntent().getStringExtra(MainActivity.SYMBOL_EXTRA));
-        //set the content description
-        symbol.setContentDescription(getResources().getString(R.string.symbol_format,symbol.getText()));
-        history = getData(symbol.getText().toString());
+
+        history = getHistory();
 
         price.setContentDescription(getResources().getString(R.string.price,price.getText()));
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -229,14 +227,20 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
-    public String[] getData(String symbol){
+    public String[] getHistory(){
 
-        Cursor cursor = getContentResolver().query(Contract.Quote.makeUriForStock(symbol),null,null,null,null);
+        Cursor cursor = getContentResolver().query(getIntent().getData(),null,null,null,null);
 
         if (cursor!=null){
             cursor.moveToFirst();
 
+
+            symbol.setText(cursor.getString(Contract.Quote.POSITION_SYMBOL));
+            //set the content description
+            symbol.setContentDescription(getResources().getString(R.string.symbol_format,symbol.getText()));
+
             setTitle(cursor.getString(Contract.Quote.POSITION_COMPANY_NAME));
+
             DecimalFormat dollarFormat = (DecimalFormat) NumberFormat.getCurrencyInstance(Locale.US);
 
             String[] history = cursor.getString(Contract.Quote.POSITION_HISTORY).split("\n");

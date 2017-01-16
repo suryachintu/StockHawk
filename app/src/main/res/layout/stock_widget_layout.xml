@@ -10,12 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/abc_action_bar_default_height_material"
         android:background="@color/colorPrimary">
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/app_name"
+            android:text="@string/app_name"
             android:layout_gravity="center"
-            android:src="@drawable/ic_dollar" />
+            android:textColor="@android:color/white"/>
     </FrameLayout>
     <FrameLayout
         android:layout_width="match_parent"
@@ -28,6 +28,7 @@
             android:layout_height="match_parent"
             android:divider="@null"
             android:dividerHeight="0dp"
+            android:layout_margin="@dimen/default_margin"
             tools:listitem="@layout/list_item_quote"/>
         <TextView
             android:id="@+id/widget_empty"
